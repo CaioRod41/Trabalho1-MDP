@@ -1,2 +1,5 @@
-int romanos_para_decimal(char const * num_romano);
- 
+#include <string>
+#include <unordered_map>
+#include <string>
+
+int romano_para_decimal(const std::string& romano);
