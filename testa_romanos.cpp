@@ -63,11 +63,10 @@ TEST_CASE("Romano seguido por três romanos maiores", "[romanos]") {
     REQUIRE(romano_para_decimal("MMCM") == 2900);
 }
 
-TEST_CASE("expressoes invalidas", "[romanos]") {
+TEST_CASE("entradas invalidas", "[romanos]") {
     REQUIRE(romano_para_decimal(".") == -1);
     REQUIRE(romano_para_decimal("12") == -1);
     REQUIRE(romano_para_decimal("") == -1);
-    REQUIRE(romano_para_decimal("XXXX") == -1);
     REQUIRE(romano_para_decimal("XLC") == -1);
     REQUIRE(romano_para_decimal("@") == -1);
     REQUIRE(romano_para_decimal("PQ") == -1);
@@ -83,6 +82,7 @@ TEST_CASE("Romano com repetições inválidas", "[romanos]") {
     REQUIRE(romano_para_decimal("CCCC") == -1); 
     REQUIRE(romano_para_decimal("IIII") == -1);
     REQUIRE(romano_para_decimal("MDDDC") == -1);
+    REQUIRE(romano_para_decimal("XXXX") == -1);
 }
 
 
