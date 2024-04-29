@@ -63,7 +63,7 @@ TEST_CASE("Romano seguido por três romanos maiores", "[romanos]") {
     REQUIRE(romano_para_decimal("MMCM") == 2900);
 }
 
-TEST_CASE("entradas invalidas", "[romanos]") {
+TEST_CASE("Entradas invalidas", "[romanos]") {
     REQUIRE(romano_para_decimal(".") == -1);
     REQUIRE(romano_para_decimal("12") == -1);
     REQUIRE(romano_para_decimal("") == -1);
