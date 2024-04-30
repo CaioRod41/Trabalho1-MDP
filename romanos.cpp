@@ -53,6 +53,10 @@ int romano_para_decimal(const std::string &romano)
         }
     }
 
+    if (romano.find("DIVX") != std::string::npos){
+        return -1; // Sequencia adional invalida após C
+     }
+     
     // Verificaoes entradas invalidas
     for (int i = 0; i < tamanho - 1; i++)
     {
@@ -96,6 +100,8 @@ int romano_para_decimal(const std::string &romano)
             return -1; // Caractere inválido
         }
     }
+
+     
 
     return decimal;
 }
