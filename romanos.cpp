@@ -32,6 +32,9 @@ int romano_para_decimal(const std::string& romano) {
         if (romano[i] == romano[i + 1] && (romano[i] == 'V' || romano[i] == 'L' || romano[i] == 'D')) {
             return -1; 
         }
+           if (i + 3 < tamanho && romano[i] == romano[i + 1] && romano[i] == romano[i + 2] && romano[i] == romano[i + 3]) {
+            return -1; // Mais de 3 caracteres repetidos consecutivamente
+        }
     }
 
     return decimal;
