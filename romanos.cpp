@@ -22,9 +22,15 @@ int romano_para_decimal(const std::string& romano) {
 
         if (i + 1 < tamanho && valores[romano[i]] < valores[romano[i + 1]]) {
             decimal += valores[romano[i + 1]] - valores[romano[i]];
-            i++; // Avança mais um caractere pois já usamos dois
+            i++; 
         } else {
             decimal += valores[romano[i]];
+        }
+    }
+
+    for (int i = 0; i < tamanho - 1; i++) {
+        if (romano[i] == romano[i + 1] && (romano[i] == 'V' || romano[i] == 'L' || romano[i] == 'D')) {
+            return -1; 
         }
     }
 
